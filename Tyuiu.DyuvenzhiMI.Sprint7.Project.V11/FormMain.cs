@@ -14,5 +14,17 @@ namespace Tyuiu.DyuvenzhiMI.Sprint7.Project.V11
         {
 
         }
+
+        private void buttonAvtorInfo_DMI_Click(object sender, EventArgs e)
+        {
+            FormAvtorInfo formAboutMe = new FormAvtorInfo();
+            formAboutMe.ShowDialog();
+        }
+
+        private void buttonProgramInfo_DMI_Click(object sender, EventArgs e)
+        {
+            FormProgramInfo formAboutProgram = new FormProgramInfo();
+            formAboutProgram.ShowDialog();
+        }
     }
 }
