@@ -28,41 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxInfo_DMI = new GroupBox();
-            buttonAvtorInfo_DMI = new Button();
-            buttonProgramInfo_DMI = new Button();
-            groupBoxTitle_DMI = new GroupBox();
-            pictureBox1 = new PictureBox();
-            labelTitleName_DMI = new Label();
-            groupBoxBody_DMI = new GroupBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
             pictureBox2 = new PictureBox();
             label2 = new Label();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            pictureBox3 = new PictureBox();
-            textBox3 = new TextBox();
-            pictureBox4 = new PictureBox();
-            label4 = new Label();
-            label5 = new Label();
+            pictureBox1 = new PictureBox();
+            linkLabelTg_DMI = new LinkLabel();
+            linkLabelVk_DMI = new LinkLabel();
+            labelProgrammer_DMI = new Label();
+            labelTel_DMI = new Label();
+            labelFeedBack_DMI = new Label();
+            buttonAvtorInfo_DMI = new Button();
+            pictureBoxPalka_DMI = new PictureBox();
+            buttonProgramInfo_DMI = new Button();
+            groupBoxTitle_DMI = new GroupBox();
+            pictureBoxSibvol_DMI = new PictureBox();
+            labelTitleName_DMI = new Label();
+            groupBoxBody_DMI = new GroupBox();
+            buttonStaff_DMI = new Button();
+            label1 = new Label();
+            labelPayYear_DMI = new Label();
+            labelPayMonth_DMI = new Label();
+            pictureBoxPayYear_DMI = new PictureBox();
+            pictureBoxPayMonth_DMI = new PictureBox();
+            pictureBoxInfoShtatEd_DMI = new PictureBox();
+            labelShtatEd_DMI = new Label();
+            textBoxPayYear_DMI = new TextBox();
+            textBoxPayMonth_DMI = new TextBox();
+            textBoxShtatEd_DMI = new TextBox();
+            toolTip_DMI = new ToolTip(components);
+            chartPay_DMI = new System.Windows.Forms.DataVisualization.Charting.Chart();
             groupBoxInfo_DMI.SuspendLayout();
-            groupBoxTitle_DMI.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBoxBody_DMI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPalka_DMI).BeginInit();
+            groupBoxTitle_DMI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSibvol_DMI).BeginInit();
+            groupBoxBody_DMI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPayYear_DMI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPayMonth_DMI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoShtatEd_DMI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chartPay_DMI).BeginInit();
             SuspendLayout();
             // 
             // groupBoxInfo_DMI
             // 
             groupBoxInfo_DMI.BackColor = Color.PeachPuff;
-            groupBoxInfo_DMI.Controls.Add(label5);
-            groupBoxInfo_DMI.Controls.Add(label4);
+            groupBoxInfo_DMI.Controls.Add(pictureBox2);
+            groupBoxInfo_DMI.Controls.Add(label2);
+            groupBoxInfo_DMI.Controls.Add(pictureBox1);
+            groupBoxInfo_DMI.Controls.Add(linkLabelTg_DMI);
+            groupBoxInfo_DMI.Controls.Add(linkLabelVk_DMI);
+            groupBoxInfo_DMI.Controls.Add(labelProgrammer_DMI);
+            groupBoxInfo_DMI.Controls.Add(labelTel_DMI);
+            groupBoxInfo_DMI.Controls.Add(labelFeedBack_DMI);
             groupBoxInfo_DMI.Controls.Add(buttonAvtorInfo_DMI);
+            groupBoxInfo_DMI.Controls.Add(pictureBoxPalka_DMI);
             groupBoxInfo_DMI.Dock = DockStyle.Bottom;
+            groupBoxInfo_DMI.Font = new Font("Segoe UI", 10F);
             groupBoxInfo_DMI.Location = new Point(0, 484);
             groupBoxInfo_DMI.Name = "groupBoxInfo_DMI";
             groupBoxInfo_DMI.Size = new Size(1193, 125);
@@ -70,10 +97,106 @@
             groupBoxInfo_DMI.TabStop = false;
             groupBoxInfo_DMI.Text = "Дополнительная информация";
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(30, 55);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 38);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F);
+            label2.Location = new Point(67, 61);
+            label2.Name = "label2";
+            label2.Size = new Size(194, 32);
+            label2.TabIndex = 9;
+            label2.Text = "© 2025 DMI, Inc.";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(320, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(44, 113);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
+            // linkLabelTg_DMI
+            // 
+            linkLabelTg_DMI.ActiveLinkColor = Color.Crimson;
+            linkLabelTg_DMI.AutoSize = true;
+            linkLabelTg_DMI.Cursor = Cursors.Hand;
+            linkLabelTg_DMI.Font = new Font("Segoe UI", 12F);
+            linkLabelTg_DMI.LinkColor = Color.DarkRed;
+            linkLabelTg_DMI.Location = new Point(488, 55);
+            linkLabelTg_DMI.Name = "linkLabelTg_DMI";
+            linkLabelTg_DMI.Size = new Size(97, 28);
+            linkLabelTg_DMI.TabIndex = 5;
+            linkLabelTg_DMI.TabStop = true;
+            linkLabelTg_DMI.Text = "Телеграм";
+            linkLabelTg_DMI.LinkClicked += linkLabelTg_DMI_LinkClicked;
+            // 
+            // linkLabelVk_DMI
+            // 
+            linkLabelVk_DMI.ActiveLinkColor = Color.Crimson;
+            linkLabelVk_DMI.AutoSize = true;
+            linkLabelVk_DMI.Cursor = Cursors.Hand;
+            linkLabelVk_DMI.Font = new Font("Segoe UI", 12F);
+            linkLabelVk_DMI.LinkArea = new LinkArea(0, 9);
+            linkLabelVk_DMI.LinkColor = Color.DarkRed;
+            linkLabelVk_DMI.Location = new Point(385, 55);
+            linkLabelVk_DMI.Name = "linkLabelVk_DMI";
+            linkLabelVk_DMI.Size = new Size(103, 28);
+            linkLabelVk_DMI.TabIndex = 4;
+            linkLabelVk_DMI.TabStop = true;
+            linkLabelVk_DMI.Text = "Вконтакте";
+            linkLabelVk_DMI.LinkClicked += linkLabelVk_DMI_LinkClicked;
+            // 
+            // labelProgrammer_DMI
+            // 
+            labelProgrammer_DMI.AutoSize = true;
+            labelProgrammer_DMI.Location = new Point(1018, 96);
+            labelProgrammer_DMI.Name = "labelProgrammer_DMI";
+            labelProgrammer_DMI.Size = new Size(111, 23);
+            labelProgrammer_DMI.TabIndex = 3;
+            labelProgrammer_DMI.Text = "Разработчик";
+            // 
+            // labelTel_DMI
+            // 
+            labelTel_DMI.AutoSize = true;
+            labelTel_DMI.Cursor = Cursors.IBeam;
+            labelTel_DMI.Font = new Font("Segoe UI", 12F);
+            labelTel_DMI.ForeColor = SystemColors.ActiveCaptionText;
+            labelTel_DMI.Location = new Point(406, 83);
+            labelTel_DMI.Name = "labelTel_DMI";
+            labelTel_DMI.Size = new Size(152, 33);
+            labelTel_DMI.TabIndex = 2;
+            labelTel_DMI.Text = "8 800 555 35 35";
+            labelTel_DMI.UseCompatibleTextRendering = true;
+            labelTel_DMI.Click += labelTel_DMI_Click;
+            labelTel_DMI.MouseEnter += labelTel_DMI_MouseEnter;
+            // 
+            // labelFeedBack_DMI
+            // 
+            labelFeedBack_DMI.AutoSize = true;
+            labelFeedBack_DMI.Font = new Font("Segoe UI", 14F);
+            labelFeedBack_DMI.Location = new Point(385, 23);
+            labelFeedBack_DMI.Name = "labelFeedBack_DMI";
+            labelFeedBack_DMI.Size = new Size(186, 32);
+            labelFeedBack_DMI.TabIndex = 1;
+            labelFeedBack_DMI.Text = "Обратная связь";
+            // 
             // buttonAvtorInfo_DMI
             // 
             buttonAvtorInfo_DMI.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonAvtorInfo_DMI.BackColor = Color.PeachPuff;
+            buttonAvtorInfo_DMI.Cursor = Cursors.Help;
             buttonAvtorInfo_DMI.ForeColor = Color.LightSalmon;
             buttonAvtorInfo_DMI.Image = (Image)resources.GetObject("buttonAvtorInfo_DMI.Image");
             buttonAvtorInfo_DMI.Location = new Point(1135, 69);
@@ -82,11 +205,23 @@
             buttonAvtorInfo_DMI.TabIndex = 0;
             buttonAvtorInfo_DMI.UseVisualStyleBackColor = false;
             buttonAvtorInfo_DMI.Click += buttonAvtorInfo_DMI_Click;
+            buttonAvtorInfo_DMI.MouseEnter += buttonAvtorInfo_DMI_MouseEnter;
+            // 
+            // pictureBoxPalka_DMI
+            // 
+            pictureBoxPalka_DMI.Image = (Image)resources.GetObject("pictureBoxPalka_DMI.Image");
+            pictureBoxPalka_DMI.Location = new Point(591, 12);
+            pictureBoxPalka_DMI.Name = "pictureBoxPalka_DMI";
+            pictureBoxPalka_DMI.Size = new Size(44, 113);
+            pictureBoxPalka_DMI.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxPalka_DMI.TabIndex = 7;
+            pictureBoxPalka_DMI.TabStop = false;
             // 
             // buttonProgramInfo_DMI
             // 
             buttonProgramInfo_DMI.Anchor = AnchorStyles.Right;
             buttonProgramInfo_DMI.BackColor = Color.PeachPuff;
+            buttonProgramInfo_DMI.Cursor = Cursors.Help;
             buttonProgramInfo_DMI.ForeColor = SystemColors.MenuText;
             buttonProgramInfo_DMI.Image = (Image)resources.GetObject("buttonProgramInfo_DMI.Image");
             buttonProgramInfo_DMI.Location = new Point(1145, 0);
@@ -95,14 +230,16 @@
             buttonProgramInfo_DMI.TabIndex = 1;
             buttonProgramInfo_DMI.UseVisualStyleBackColor = false;
             buttonProgramInfo_DMI.Click += buttonProgramInfo_DMI_Click;
+            buttonProgramInfo_DMI.MouseEnter += buttonProgramInfo_DMI_MouseEnter;
             // 
             // groupBoxTitle_DMI
             // 
             groupBoxTitle_DMI.BackColor = Color.PeachPuff;
-            groupBoxTitle_DMI.Controls.Add(pictureBox1);
+            groupBoxTitle_DMI.Controls.Add(pictureBoxSibvol_DMI);
             groupBoxTitle_DMI.Controls.Add(buttonProgramInfo_DMI);
             groupBoxTitle_DMI.Controls.Add(labelTitleName_DMI);
             groupBoxTitle_DMI.Dock = DockStyle.Top;
+            groupBoxTitle_DMI.Font = new Font("Segoe UI", 10F);
             groupBoxTitle_DMI.Location = new Point(0, 0);
             groupBoxTitle_DMI.Name = "groupBoxTitle_DMI";
             groupBoxTitle_DMI.Size = new Size(1193, 125);
@@ -110,15 +247,15 @@
             groupBoxTitle_DMI.TabStop = false;
             groupBoxTitle_DMI.Text = "Главная страница";
             // 
-            // pictureBox1
+            // pictureBoxSibvol_DMI
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(124, 39);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(39, 45);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            pictureBoxSibvol_DMI.Image = (Image)resources.GetObject("pictureBoxSibvol_DMI.Image");
+            pictureBoxSibvol_DMI.Location = new Point(124, 39);
+            pictureBoxSibvol_DMI.Name = "pictureBoxSibvol_DMI";
+            pictureBoxSibvol_DMI.Size = new Size(39, 45);
+            pictureBoxSibvol_DMI.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSibvol_DMI.TabIndex = 1;
+            pictureBoxSibvol_DMI.TabStop = false;
             // 
             // labelTitleName_DMI
             // 
@@ -128,24 +265,28 @@
             labelTitleName_DMI.Font = new Font("Segoe UI", 20F);
             labelTitleName_DMI.Location = new Point(156, 38);
             labelTitleName_DMI.Name = "labelTitleName_DMI";
-            labelTitleName_DMI.Size = new Size(868, 46);
+            labelTitleName_DMI.Size = new Size(851, 46);
             labelTitleName_DMI.TabIndex = 0;
-            labelTitleName_DMI.Text = "Отдел кадров Великого Завода имени Дювенжи М. И.";
+            labelTitleName_DMI.Text = "Отдел кадров «Великого Завода» им. Дювенжи М. И.";
             labelTitleName_DMI.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBoxBody_DMI
             // 
             groupBoxBody_DMI.BackColor = Color.Bisque;
-            groupBoxBody_DMI.Controls.Add(label3);
-            groupBoxBody_DMI.Controls.Add(label2);
-            groupBoxBody_DMI.Controls.Add(pictureBox4);
-            groupBoxBody_DMI.Controls.Add(pictureBox3);
-            groupBoxBody_DMI.Controls.Add(pictureBox2);
+            groupBoxBody_DMI.Controls.Add(chartPay_DMI);
+            groupBoxBody_DMI.Controls.Add(buttonStaff_DMI);
             groupBoxBody_DMI.Controls.Add(label1);
-            groupBoxBody_DMI.Controls.Add(textBox3);
-            groupBoxBody_DMI.Controls.Add(textBox2);
-            groupBoxBody_DMI.Controls.Add(textBox1);
+            groupBoxBody_DMI.Controls.Add(labelPayYear_DMI);
+            groupBoxBody_DMI.Controls.Add(labelPayMonth_DMI);
+            groupBoxBody_DMI.Controls.Add(pictureBoxPayYear_DMI);
+            groupBoxBody_DMI.Controls.Add(pictureBoxPayMonth_DMI);
+            groupBoxBody_DMI.Controls.Add(pictureBoxInfoShtatEd_DMI);
+            groupBoxBody_DMI.Controls.Add(labelShtatEd_DMI);
+            groupBoxBody_DMI.Controls.Add(textBoxPayYear_DMI);
+            groupBoxBody_DMI.Controls.Add(textBoxPayMonth_DMI);
+            groupBoxBody_DMI.Controls.Add(textBoxShtatEd_DMI);
             groupBoxBody_DMI.Dock = DockStyle.Fill;
+            groupBoxBody_DMI.Font = new Font("Segoe UI", 10F);
             groupBoxBody_DMI.Location = new Point(0, 125);
             groupBoxBody_DMI.Name = "groupBoxBody_DMI";
             groupBoxBody_DMI.Size = new Size(1193, 359);
@@ -153,107 +294,134 @@
             groupBoxBody_DMI.TabStop = false;
             groupBoxBody_DMI.Text = "Штатное расписание";
             // 
-            // textBox1
+            // buttonStaff_DMI
             // 
-            textBox1.Location = new Point(403, 45);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(109, 27);
-            textBox1.TabIndex = 0;
+            buttonStaff_DMI.BackColor = Color.DarkOrange;
+            buttonStaff_DMI.Cursor = Cursors.Hand;
+            buttonStaff_DMI.Image = (Image)resources.GetObject("buttonStaff_DMI.Image");
+            buttonStaff_DMI.Location = new Point(184, 282);
+            buttonStaff_DMI.Name = "buttonStaff_DMI";
+            buttonStaff_DMI.Size = new Size(77, 44);
+            buttonStaff_DMI.TabIndex = 5;
+            buttonStaff_DMI.UseVisualStyleBackColor = false;
+            buttonStaff_DMI.MouseEnter += buttonStaff_DMI_MouseEnter;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F);
-            label1.Location = new Point(12, 40);
+            label1.Font = new Font("Segoe UI", 16F);
+            label1.Location = new Point(12, 282);
             label1.Name = "label1";
-            label1.Size = new Size(333, 32);
-            label1.TabIndex = 1;
-            label1.Text = "Количество штатных единиц";
+            label1.Size = new Size(166, 37);
+            label1.TabIndex = 4;
+            label1.Text = "Сотрудники";
             // 
-            // pictureBox2
+            // labelPayYear_DMI
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(518, 26);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(21, 23);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
+            labelPayYear_DMI.AutoSize = true;
+            labelPayYear_DMI.Font = new Font("Segoe UI", 16F);
+            labelPayYear_DMI.Location = new Point(12, 216);
+            labelPayYear_DMI.Name = "labelPayYear_DMI";
+            labelPayYear_DMI.Size = new Size(400, 37);
+            labelPayYear_DMI.TabIndex = 3;
+            labelPayYear_DMI.Text = "Фонд заработной платы за год";
             // 
-            // label2
+            // labelPayMonth_DMI
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F);
-            label2.Location = new Point(12, 139);
-            label2.Name = "label2";
-            label2.Size = new Size(385, 32);
-            label2.TabIndex = 3;
-            label2.Text = "Фонд заработной платы за месяц";
+            labelPayMonth_DMI.AutoSize = true;
+            labelPayMonth_DMI.Font = new Font("Segoe UI", 16F);
+            labelPayMonth_DMI.Location = new Point(12, 139);
+            labelPayMonth_DMI.Name = "labelPayMonth_DMI";
+            labelPayMonth_DMI.Size = new Size(434, 37);
+            labelPayMonth_DMI.TabIndex = 3;
+            labelPayMonth_DMI.Text = "Фонд заработной платы за месяц";
             // 
-            // label3
+            // pictureBoxPayYear_DMI
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F);
-            label3.Location = new Point(12, 222);
-            label3.Name = "label3";
-            label3.Size = new Size(354, 32);
-            label3.TabIndex = 3;
-            label3.Text = "Фонд заработной платы за год";
+            pictureBoxPayYear_DMI.Cursor = Cursors.Help;
+            pictureBoxPayYear_DMI.Image = (Image)resources.GetObject("pictureBoxPayYear_DMI.Image");
+            pictureBoxPayYear_DMI.Location = new Point(570, 207);
+            pictureBoxPayYear_DMI.Name = "pictureBoxPayYear_DMI";
+            pictureBoxPayYear_DMI.Size = new Size(21, 23);
+            pictureBoxPayYear_DMI.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPayYear_DMI.TabIndex = 2;
+            pictureBoxPayYear_DMI.TabStop = false;
+            pictureBoxPayYear_DMI.MouseEnter += pictureBoxPayYear_DMI_MouseEnter;
             // 
-            // textBox2
+            // pictureBoxPayMonth_DMI
             // 
-            textBox2.Location = new Point(403, 144);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(109, 27);
-            textBox2.TabIndex = 0;
+            pictureBoxPayMonth_DMI.Cursor = Cursors.Help;
+            pictureBoxPayMonth_DMI.Image = (Image)resources.GetObject("pictureBoxPayMonth_DMI.Image");
+            pictureBoxPayMonth_DMI.Location = new Point(570, 129);
+            pictureBoxPayMonth_DMI.Name = "pictureBoxPayMonth_DMI";
+            pictureBoxPayMonth_DMI.Size = new Size(21, 23);
+            pictureBoxPayMonth_DMI.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPayMonth_DMI.TabIndex = 2;
+            pictureBoxPayMonth_DMI.TabStop = false;
+            pictureBoxPayMonth_DMI.MouseEnter += pictureBoxPayMonth_DMI_MouseEnter;
             // 
-            // pictureBox3
+            // pictureBoxInfoShtatEd_DMI
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(518, 125);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(21, 23);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            pictureBoxInfoShtatEd_DMI.Cursor = Cursors.Help;
+            pictureBoxInfoShtatEd_DMI.Image = (Image)resources.GetObject("pictureBoxInfoShtatEd_DMI.Image");
+            pictureBoxInfoShtatEd_DMI.Location = new Point(570, 58);
+            pictureBoxInfoShtatEd_DMI.Name = "pictureBoxInfoShtatEd_DMI";
+            pictureBoxInfoShtatEd_DMI.Size = new Size(21, 23);
+            pictureBoxInfoShtatEd_DMI.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxInfoShtatEd_DMI.TabIndex = 2;
+            pictureBoxInfoShtatEd_DMI.TabStop = false;
+            pictureBoxInfoShtatEd_DMI.MouseEnter += pictureBoxInfoShtatEd_DMI_MouseEnter;
             // 
-            // textBox3
+            // labelShtatEd_DMI
             // 
-            textBox3.Location = new Point(403, 228);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(109, 27);
-            textBox3.TabIndex = 0;
+            labelShtatEd_DMI.AutoSize = true;
+            labelShtatEd_DMI.Font = new Font("Segoe UI", 16F);
+            labelShtatEd_DMI.Location = new Point(12, 58);
+            labelShtatEd_DMI.Name = "labelShtatEd_DMI";
+            labelShtatEd_DMI.Size = new Size(373, 37);
+            labelShtatEd_DMI.TabIndex = 1;
+            labelShtatEd_DMI.Text = "Количество штатных единиц";
             // 
-            // pictureBox4
+            // textBoxPayYear_DMI
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(518, 209);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(21, 23);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 2;
-            pictureBox4.TabStop = false;
+            textBoxPayYear_DMI.Location = new Point(455, 226);
+            textBoxPayYear_DMI.Name = "textBoxPayYear_DMI";
+            textBoxPayYear_DMI.ReadOnly = true;
+            textBoxPayYear_DMI.Size = new Size(109, 30);
+            textBoxPayYear_DMI.TabIndex = 0;
             // 
-            // label4
+            // textBoxPayMonth_DMI
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 33);
-            label4.Name = "label4";
-            label4.Size = new Size(119, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Обратная связь";
+            textBoxPayMonth_DMI.Location = new Point(455, 148);
+            textBoxPayMonth_DMI.Name = "textBoxPayMonth_DMI";
+            textBoxPayMonth_DMI.ReadOnly = true;
+            textBoxPayMonth_DMI.Size = new Size(109, 30);
+            textBoxPayMonth_DMI.TabIndex = 0;
             // 
-            // label5
+            // textBoxShtatEd_DMI
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(35, 53);
-            label5.Name = "label5";
-            label5.Size = new Size(113, 20);
-            label5.TabIndex = 2;
-            label5.Text = "8 800 555 35 35";
+            textBoxShtatEd_DMI.Location = new Point(455, 77);
+            textBoxShtatEd_DMI.Name = "textBoxShtatEd_DMI";
+            textBoxShtatEd_DMI.ReadOnly = true;
+            textBoxShtatEd_DMI.Size = new Size(109, 30);
+            textBoxShtatEd_DMI.TabIndex = 0;
+            // 
+            // chartPay_DMI
+            // 
+            chartArea1.Name = "ChartArea1";
+            chartPay_DMI.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartPay_DMI.Legends.Add(legend1);
+            chartPay_DMI.Location = new Point(652, 20);
+            chartPay_DMI.Name = "chartPay_DMI";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartPay_DMI.Series.Add(series1);
+            chartPay_DMI.Size = new Size(529, 333);
+            chartPay_DMI.TabIndex = 6;
+            chartPay_DMI.Text = "chart1";
             // 
             // FormMain
             // 
@@ -263,20 +431,26 @@
             Controls.Add(groupBoxBody_DMI);
             Controls.Add(groupBoxTitle_DMI);
             Controls.Add(groupBoxInfo_DMI);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Отдел кадров";
             Load += Form1_Load;
             groupBoxInfo_DMI.ResumeLayout(false);
             groupBoxInfo_DMI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPalka_DMI).EndInit();
             groupBoxTitle_DMI.ResumeLayout(false);
             groupBoxTitle_DMI.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSibvol_DMI).EndInit();
             groupBoxBody_DMI.ResumeLayout(false);
             groupBoxBody_DMI.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPayYear_DMI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPayMonth_DMI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoShtatEd_DMI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chartPay_DMI).EndInit();
             ResumeLayout(false);
         }
 
@@ -288,17 +462,28 @@
         private Button buttonAvtorInfo_DMI;
         private Button buttonProgramInfo_DMI;
         private Label labelTitleName_DMI;
-        private PictureBox pictureBox1;
+        private PictureBox pictureBoxSibvol_DMI;
+        private Label labelShtatEd_DMI;
+        private TextBox textBoxShtatEd_DMI;
+        private Label labelPayYear_DMI;
+        private Label labelPayMonth_DMI;
+        private PictureBox pictureBoxPayYear_DMI;
+        private PictureBox pictureBoxPayMonth_DMI;
+        private PictureBox pictureBoxInfoShtatEd_DMI;
+        private TextBox textBoxPayYear_DMI;
+        private TextBox textBoxPayMonth_DMI;
+        private Label labelFeedBack_DMI;
+        private LinkLabel linkLabelTg_DMI;
+        private LinkLabel linkLabelVk_DMI;
+        private Label labelProgrammer_DMI;
+        private PictureBox pictureBoxPalka_DMI;
         private Label label1;
-        private TextBox textBox1;
-        private Label label3;
-        private Label label2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private Button buttonStaff_DMI;
+        public Label labelTel_DMI;
+        private ToolTip toolTip_DMI;
         private PictureBox pictureBox2;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private Label label5;
-        private Label label4;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPay_DMI;
     }
 }
