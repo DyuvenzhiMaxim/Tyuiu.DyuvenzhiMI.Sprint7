@@ -34,12 +34,12 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxInfo_DMI = new GroupBox();
+            linkLabelGitHub_DMI = new LinkLabel();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             linkLabelTg_DMI = new LinkLabel();
             linkLabelVk_DMI = new LinkLabel();
-            labelProgrammer_DMI = new Label();
             labelTel_DMI = new Label();
             labelFeedBack_DMI = new Label();
             buttonAvtorInfo_DMI = new Button();
@@ -49,6 +49,8 @@
             pictureBoxSibvol_DMI = new PictureBox();
             labelTitleName_DMI = new Label();
             groupBoxBody_DMI = new GroupBox();
+            buttonChart_DMI = new Button();
+            buttonData_DMI = new Button();
             chartPay_DMI = new System.Windows.Forms.DataVisualization.Charting.Chart();
             buttonStaff_DMI = new Button();
             label1 = new Label();
@@ -78,24 +80,38 @@
             // groupBoxInfo_DMI
             // 
             groupBoxInfo_DMI.BackColor = Color.PeachPuff;
+            groupBoxInfo_DMI.Controls.Add(linkLabelGitHub_DMI);
             groupBoxInfo_DMI.Controls.Add(pictureBox2);
             groupBoxInfo_DMI.Controls.Add(label2);
             groupBoxInfo_DMI.Controls.Add(pictureBox1);
             groupBoxInfo_DMI.Controls.Add(linkLabelTg_DMI);
             groupBoxInfo_DMI.Controls.Add(linkLabelVk_DMI);
-            groupBoxInfo_DMI.Controls.Add(labelProgrammer_DMI);
             groupBoxInfo_DMI.Controls.Add(labelTel_DMI);
             groupBoxInfo_DMI.Controls.Add(labelFeedBack_DMI);
             groupBoxInfo_DMI.Controls.Add(buttonAvtorInfo_DMI);
             groupBoxInfo_DMI.Controls.Add(pictureBoxPalka_DMI);
             groupBoxInfo_DMI.Dock = DockStyle.Bottom;
             groupBoxInfo_DMI.Font = new Font("Segoe UI", 10F);
-            groupBoxInfo_DMI.Location = new Point(0, 484);
+            groupBoxInfo_DMI.Location = new Point(0, 492);
             groupBoxInfo_DMI.Name = "groupBoxInfo_DMI";
-            groupBoxInfo_DMI.Size = new Size(1193, 125);
+            groupBoxInfo_DMI.Size = new Size(1193, 117);
             groupBoxInfo_DMI.TabIndex = 0;
             groupBoxInfo_DMI.TabStop = false;
             groupBoxInfo_DMI.Text = "Дополнительная информация";
+            // 
+            // linkLabelGitHub_DMI
+            // 
+            linkLabelGitHub_DMI.ActiveLinkColor = Color.Crimson;
+            linkLabelGitHub_DMI.AutoSize = true;
+            linkLabelGitHub_DMI.Font = new Font("Segoe UI", 12F);
+            linkLabelGitHub_DMI.LinkColor = Color.DarkRed;
+            linkLabelGitHub_DMI.Location = new Point(856, 61);
+            linkLabelGitHub_DMI.Name = "linkLabelGitHub_DMI";
+            linkLabelGitHub_DMI.Size = new Size(75, 28);
+            linkLabelGitHub_DMI.TabIndex = 10;
+            linkLabelGitHub_DMI.TabStop = true;
+            linkLabelGitHub_DMI.Text = "GitHub";
+            linkLabelGitHub_DMI.LinkClicked += linkLabelGitHub_DMI_LinkClicked;
             // 
             // pictureBox2
             // 
@@ -158,15 +174,6 @@
             linkLabelVk_DMI.Text = "Вконтакте";
             linkLabelVk_DMI.LinkClicked += linkLabelVk_DMI_LinkClicked;
             // 
-            // labelProgrammer_DMI
-            // 
-            labelProgrammer_DMI.AutoSize = true;
-            labelProgrammer_DMI.Location = new Point(1018, 96);
-            labelProgrammer_DMI.Name = "labelProgrammer_DMI";
-            labelProgrammer_DMI.Size = new Size(111, 23);
-            labelProgrammer_DMI.TabIndex = 3;
-            labelProgrammer_DMI.Text = "Разработчик";
-            // 
             // labelTel_DMI
             // 
             labelTel_DMI.AutoSize = true;
@@ -199,7 +206,7 @@
             buttonAvtorInfo_DMI.Cursor = Cursors.Help;
             buttonAvtorInfo_DMI.ForeColor = Color.LightSalmon;
             buttonAvtorInfo_DMI.Image = (Image)resources.GetObject("buttonAvtorInfo_DMI.Image");
-            buttonAvtorInfo_DMI.Location = new Point(1135, 69);
+            buttonAvtorInfo_DMI.Location = new Point(1135, 61);
             buttonAvtorInfo_DMI.Name = "buttonAvtorInfo_DMI";
             buttonAvtorInfo_DMI.Size = new Size(52, 50);
             buttonAvtorInfo_DMI.TabIndex = 0;
@@ -273,6 +280,8 @@
             // groupBoxBody_DMI
             // 
             groupBoxBody_DMI.BackColor = Color.Bisque;
+            groupBoxBody_DMI.Controls.Add(buttonChart_DMI);
+            groupBoxBody_DMI.Controls.Add(buttonData_DMI);
             groupBoxBody_DMI.Controls.Add(chartPay_DMI);
             groupBoxBody_DMI.Controls.Add(buttonStaff_DMI);
             groupBoxBody_DMI.Controls.Add(label1);
@@ -289,10 +298,35 @@
             groupBoxBody_DMI.Font = new Font("Segoe UI", 10F);
             groupBoxBody_DMI.Location = new Point(0, 125);
             groupBoxBody_DMI.Name = "groupBoxBody_DMI";
-            groupBoxBody_DMI.Size = new Size(1193, 359);
+            groupBoxBody_DMI.Size = new Size(1193, 367);
             groupBoxBody_DMI.TabIndex = 2;
             groupBoxBody_DMI.TabStop = false;
             groupBoxBody_DMI.Text = "Штатное расписание";
+            // 
+            // buttonChart_DMI
+            // 
+            buttonChart_DMI.BackColor = Color.Beige;
+            buttonChart_DMI.Font = new Font("Segoe UI", 10F);
+            buttonChart_DMI.Location = new Point(1013, 332);
+            buttonChart_DMI.Name = "buttonChart_DMI";
+            buttonChart_DMI.Size = new Size(168, 29);
+            buttonChart_DMI.TabIndex = 7;
+            buttonChart_DMI.Text = "Построить график";
+            buttonChart_DMI.UseVisualStyleBackColor = false;
+            buttonChart_DMI.MouseEnter += buttonData_DMI_MouseEnter;
+            // 
+            // buttonData_DMI
+            // 
+            buttonData_DMI.BackColor = Color.Beige;
+            buttonData_DMI.Font = new Font("Segoe UI", 10F);
+            buttonData_DMI.Location = new Point(455, 297);
+            buttonData_DMI.Name = "buttonData_DMI";
+            buttonData_DMI.Size = new Size(151, 29);
+            buttonData_DMI.TabIndex = 7;
+            buttonData_DMI.Text = "Внести данные";
+            buttonData_DMI.UseVisualStyleBackColor = false;
+            buttonData_DMI.Click += buttonData_DMI_Click;
+            buttonData_DMI.MouseEnter += buttonData_DMI_MouseEnter;
             // 
             // chartPay_DMI
             // 
@@ -307,7 +341,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartPay_DMI.Series.Add(series1);
-            chartPay_DMI.Size = new Size(529, 333);
+            chartPay_DMI.Size = new Size(529, 306);
             chartPay_DMI.TabIndex = 6;
             chartPay_DMI.Text = "chart1";
             // 
@@ -393,7 +427,7 @@
             // 
             labelShtatEd_DMI.AutoSize = true;
             labelShtatEd_DMI.Font = new Font("Segoe UI", 16F);
-            labelShtatEd_DMI.Location = new Point(12, 58);
+            labelShtatEd_DMI.Location = new Point(12, 70);
             labelShtatEd_DMI.Name = "labelShtatEd_DMI";
             labelShtatEd_DMI.Size = new Size(373, 37);
             labelShtatEd_DMI.TabIndex = 1;
@@ -475,7 +509,6 @@
         private Label labelFeedBack_DMI;
         private LinkLabel linkLabelTg_DMI;
         private LinkLabel linkLabelVk_DMI;
-        private Label labelProgrammer_DMI;
         private PictureBox pictureBoxPalka_DMI;
         private Label label1;
         private Button buttonStaff_DMI;
@@ -485,5 +518,8 @@
         private Label label2;
         private PictureBox pictureBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPay_DMI;
+        private LinkLabel linkLabelGitHub_DMI;
+        private Button buttonData_DMI;
+        private Button buttonChart_DMI;
     }
 }

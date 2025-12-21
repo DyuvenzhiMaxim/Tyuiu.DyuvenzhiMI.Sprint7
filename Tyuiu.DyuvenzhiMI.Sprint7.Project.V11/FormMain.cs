@@ -110,5 +110,36 @@ namespace Tyuiu.DyuvenzhiMI.Sprint7.Project.V11
                 MessageBox.Show($"Не удалось открыть ссылку: {ex.Message}");
             }
         }
+
+        private void linkLabelGitHub_DMI_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                var psi = new ProcessStartInfo
+                {
+                    FileName = "https://github.com/DyuvenzhiMaxim",
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
+                linkLabelGitHub_DMI.LinkVisited = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Не удалось открыть ссылку: {ex.Message}");
+            }
+        }
+
+        private void buttonData_DMI_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_DMI.SetToolTip(buttonChart_DMI, "Берёт данные из полей и строит из них график");
+        }
+
+        private void buttonData_DMI_Click(object sender, EventArgs e)
+        {
+            string path = $@"{Directory.GetCurrentDirectory()}\AAA.csv";
+            File.WriteAllText(path, "");
+
+
+        }
     }
 }
