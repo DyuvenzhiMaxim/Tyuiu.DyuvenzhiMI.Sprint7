@@ -49,6 +49,7 @@
             pictureBoxSibvol_DMI = new PictureBox();
             labelTitleName_DMI = new Label();
             groupBoxBody_DMI = new GroupBox();
+            chartPay_DMI = new System.Windows.Forms.DataVisualization.Charting.Chart();
             buttonStaff_DMI = new Button();
             label1 = new Label();
             labelPayYear_DMI = new Label();
@@ -61,7 +62,6 @@
             textBoxPayMonth_DMI = new TextBox();
             textBoxShtatEd_DMI = new TextBox();
             toolTip_DMI = new ToolTip(components);
-            chartPay_DMI = new System.Windows.Forms.DataVisualization.Charting.Chart();
             groupBoxInfo_DMI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -69,10 +69,10 @@
             groupBoxTitle_DMI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSibvol_DMI).BeginInit();
             groupBoxBody_DMI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartPay_DMI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPayYear_DMI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPayMonth_DMI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoShtatEd_DMI).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)chartPay_DMI).BeginInit();
             SuspendLayout();
             // 
             // groupBoxInfo_DMI
@@ -294,6 +294,23 @@
             groupBoxBody_DMI.TabStop = false;
             groupBoxBody_DMI.Text = "Штатное расписание";
             // 
+            // chartPay_DMI
+            // 
+            chartArea1.Name = "ChartArea1";
+            chartPay_DMI.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartPay_DMI.Legends.Add(legend1);
+            chartPay_DMI.Location = new Point(652, 20);
+            chartPay_DMI.Name = "chartPay_DMI";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartPay_DMI.Series.Add(series1);
+            chartPay_DMI.Size = new Size(529, 333);
+            chartPay_DMI.TabIndex = 6;
+            chartPay_DMI.Text = "chart1";
+            // 
             // buttonStaff_DMI
             // 
             buttonStaff_DMI.BackColor = Color.DarkOrange;
@@ -406,23 +423,6 @@
             textBoxShtatEd_DMI.Size = new Size(109, 30);
             textBoxShtatEd_DMI.TabIndex = 0;
             // 
-            // chartPay_DMI
-            // 
-            chartArea1.Name = "ChartArea1";
-            chartPay_DMI.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chartPay_DMI.Legends.Add(legend1);
-            chartPay_DMI.Location = new Point(652, 20);
-            chartPay_DMI.Name = "chartPay_DMI";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartPay_DMI.Series.Add(series1);
-            chartPay_DMI.Size = new Size(529, 333);
-            chartPay_DMI.TabIndex = 6;
-            chartPay_DMI.Text = "chart1";
-            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -447,10 +447,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxSibvol_DMI).EndInit();
             groupBoxBody_DMI.ResumeLayout(false);
             groupBoxBody_DMI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chartPay_DMI).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPayYear_DMI).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPayMonth_DMI).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoShtatEd_DMI).EndInit();
-            ((System.ComponentModel.ISupportInitialize)chartPay_DMI).EndInit();
             ResumeLayout(false);
         }
 
