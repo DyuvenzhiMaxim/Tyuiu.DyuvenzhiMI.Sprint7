@@ -50,7 +50,6 @@ namespace Tyuiu.DyuvenzhiMI.Sprint7.Project.V11
             toolTip_DMI.SetToolTip(pictureBoxPayMonth_DMI, "Общая сумма всех выплат сотрудникам за календарный месяц");
         }
 
-        private void pictureBoxPayYear_DMI_MouseEnter(object sender, EventArgs e)
         {
             toolTip_DMI.SetToolTip(pictureBoxPayYear_DMI, "Среднемесячная зарплата × Среднесписочная численность × 12 месяцев");
         }
