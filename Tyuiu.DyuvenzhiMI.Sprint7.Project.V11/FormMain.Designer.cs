@@ -49,18 +49,17 @@
             pictureBoxSibvol_DMI = new PictureBox();
             labelTitleName_DMI = new Label();
             groupBoxBody_DMI = new GroupBox();
+            label3 = new Label();
+            comboBoxMonth_DMI = new ComboBox();
             buttonChart_DMI = new Button();
             buttonData_DMI = new Button();
             chartPay_DMI = new System.Windows.Forms.DataVisualization.Charting.Chart();
             buttonStaff_DMI = new Button();
             label1 = new Label();
-            labelPayYear_DMI = new Label();
             labelPayMonth_DMI = new Label();
-            pictureBoxPayYear_DMI = new PictureBox();
             pictureBoxPayMonth_DMI = new PictureBox();
             pictureBoxInfoShtatEd_DMI = new PictureBox();
             labelShtatEd_DMI = new Label();
-            textBoxPayYear_DMI = new TextBox();
             textBoxPayMonth_DMI = new TextBox();
             textBoxShtatEd_DMI = new TextBox();
             toolTip_DMI = new ToolTip(components);
@@ -72,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxSibvol_DMI).BeginInit();
             groupBoxBody_DMI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartPay_DMI).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPayYear_DMI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPayMonth_DMI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoShtatEd_DMI).BeginInit();
             SuspendLayout();
@@ -280,18 +278,17 @@
             // groupBoxBody_DMI
             // 
             groupBoxBody_DMI.BackColor = Color.Bisque;
+            groupBoxBody_DMI.Controls.Add(label3);
+            groupBoxBody_DMI.Controls.Add(comboBoxMonth_DMI);
             groupBoxBody_DMI.Controls.Add(buttonChart_DMI);
             groupBoxBody_DMI.Controls.Add(buttonData_DMI);
             groupBoxBody_DMI.Controls.Add(chartPay_DMI);
             groupBoxBody_DMI.Controls.Add(buttonStaff_DMI);
             groupBoxBody_DMI.Controls.Add(label1);
-            groupBoxBody_DMI.Controls.Add(labelPayYear_DMI);
             groupBoxBody_DMI.Controls.Add(labelPayMonth_DMI);
-            groupBoxBody_DMI.Controls.Add(pictureBoxPayYear_DMI);
             groupBoxBody_DMI.Controls.Add(pictureBoxPayMonth_DMI);
             groupBoxBody_DMI.Controls.Add(pictureBoxInfoShtatEd_DMI);
             groupBoxBody_DMI.Controls.Add(labelShtatEd_DMI);
-            groupBoxBody_DMI.Controls.Add(textBoxPayYear_DMI);
             groupBoxBody_DMI.Controls.Add(textBoxPayMonth_DMI);
             groupBoxBody_DMI.Controls.Add(textBoxShtatEd_DMI);
             groupBoxBody_DMI.Dock = DockStyle.Fill;
@@ -302,6 +299,30 @@
             groupBoxBody_DMI.TabIndex = 2;
             groupBoxBody_DMI.TabStop = false;
             groupBoxBody_DMI.Text = "Штатное расписание";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(717, 335);
+            label3.Name = "label3";
+            label3.Size = new Size(168, 23);
+            label3.TabIndex = 9;
+            label3.Text = "Ср. Знач. Мин, макс";
+            // 
+            // comboBoxMonth_DMI
+            // 
+            comboBoxMonth_DMI.BackColor = SystemColors.Info;
+            comboBoxMonth_DMI.DropDownHeight = 105;
+            comboBoxMonth_DMI.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMonth_DMI.Font = new Font("Segoe UI", 9F);
+            comboBoxMonth_DMI.FormattingEnabled = true;
+            comboBoxMonth_DMI.IntegralHeight = false;
+            comboBoxMonth_DMI.ItemHeight = 20;
+            comboBoxMonth_DMI.Items.AddRange(new object[] { "Январь", "Февраль", "Март", "Апрель" });
+            comboBoxMonth_DMI.Location = new Point(370, 148);
+            comboBoxMonth_DMI.Name = "comboBoxMonth_DMI";
+            comboBoxMonth_DMI.Size = new Size(114, 28);
+            comboBoxMonth_DMI.TabIndex = 8;
             // 
             // buttonChart_DMI
             // 
@@ -319,9 +340,9 @@
             // 
             buttonData_DMI.BackColor = Color.Beige;
             buttonData_DMI.Font = new Font("Segoe UI", 10F);
-            buttonData_DMI.Location = new Point(455, 297);
+            buttonData_DMI.Location = new Point(497, 191);
             buttonData_DMI.Name = "buttonData_DMI";
-            buttonData_DMI.Size = new Size(151, 29);
+            buttonData_DMI.Size = new Size(138, 30);
             buttonData_DMI.TabIndex = 7;
             buttonData_DMI.Text = "Внести данные";
             buttonData_DMI.UseVisualStyleBackColor = false;
@@ -334,14 +355,15 @@
             chartPay_DMI.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chartPay_DMI.Legends.Add(legend1);
-            chartPay_DMI.Location = new Point(652, 20);
+            chartPay_DMI.Location = new Point(660, 20);
             chartPay_DMI.Name = "chartPay_DMI";
+            series1.BorderWidth = 5;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartPay_DMI.Series.Add(series1);
-            chartPay_DMI.Size = new Size(529, 306);
+            chartPay_DMI.Size = new Size(521, 306);
             chartPay_DMI.TabIndex = 6;
             chartPay_DMI.Text = "chart1";
             // 
@@ -350,7 +372,7 @@
             buttonStaff_DMI.BackColor = Color.DarkOrange;
             buttonStaff_DMI.Cursor = Cursors.Hand;
             buttonStaff_DMI.Image = (Image)resources.GetObject("buttonStaff_DMI.Image");
-            buttonStaff_DMI.Location = new Point(184, 282);
+            buttonStaff_DMI.Location = new Point(184, 267);
             buttonStaff_DMI.Name = "buttonStaff_DMI";
             buttonStaff_DMI.Size = new Size(77, 44);
             buttonStaff_DMI.TabIndex = 5;
@@ -361,21 +383,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(12, 282);
+            label1.Location = new Point(12, 266);
             label1.Name = "label1";
             label1.Size = new Size(166, 37);
             label1.TabIndex = 4;
             label1.Text = "Сотрудники";
-            // 
-            // labelPayYear_DMI
-            // 
-            labelPayYear_DMI.AutoSize = true;
-            labelPayYear_DMI.Font = new Font("Segoe UI", 16F);
-            labelPayYear_DMI.Location = new Point(12, 216);
-            labelPayYear_DMI.Name = "labelPayYear_DMI";
-            labelPayYear_DMI.Size = new Size(400, 37);
-            labelPayYear_DMI.TabIndex = 3;
-            labelPayYear_DMI.Text = "Фонд заработной платы за год";
             // 
             // labelPayMonth_DMI
             // 
@@ -383,27 +395,15 @@
             labelPayMonth_DMI.Font = new Font("Segoe UI", 16F);
             labelPayMonth_DMI.Location = new Point(12, 139);
             labelPayMonth_DMI.Name = "labelPayMonth_DMI";
-            labelPayMonth_DMI.Size = new Size(434, 37);
+            labelPayMonth_DMI.Size = new Size(352, 37);
             labelPayMonth_DMI.TabIndex = 3;
-            labelPayMonth_DMI.Text = "Фонд заработной платы за месяц";
-            // 
-            // pictureBoxPayYear_DMI
-            // 
-            pictureBoxPayYear_DMI.Cursor = Cursors.Help;
-            pictureBoxPayYear_DMI.Image = (Image)resources.GetObject("pictureBoxPayYear_DMI.Image");
-            pictureBoxPayYear_DMI.Location = new Point(570, 207);
-            pictureBoxPayYear_DMI.Name = "pictureBoxPayYear_DMI";
-            pictureBoxPayYear_DMI.Size = new Size(21, 23);
-            pictureBoxPayYear_DMI.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxPayYear_DMI.TabIndex = 2;
-            pictureBoxPayYear_DMI.TabStop = false;
-            pictureBoxPayYear_DMI.MouseEnter += pictureBoxPayYear_DMI_MouseEnter;
+            labelPayMonth_DMI.Text = "Фонд заработной платы за";
             // 
             // pictureBoxPayMonth_DMI
             // 
             pictureBoxPayMonth_DMI.Cursor = Cursors.Help;
             pictureBoxPayMonth_DMI.Image = (Image)resources.GetObject("pictureBoxPayMonth_DMI.Image");
-            pictureBoxPayMonth_DMI.Location = new Point(570, 129);
+            pictureBoxPayMonth_DMI.Location = new Point(623, 131);
             pictureBoxPayMonth_DMI.Name = "pictureBoxPayMonth_DMI";
             pictureBoxPayMonth_DMI.Size = new Size(21, 23);
             pictureBoxPayMonth_DMI.SizeMode = PictureBoxSizeMode.Zoom;
@@ -415,7 +415,7 @@
             // 
             pictureBoxInfoShtatEd_DMI.Cursor = Cursors.Help;
             pictureBoxInfoShtatEd_DMI.Image = (Image)resources.GetObject("pictureBoxInfoShtatEd_DMI.Image");
-            pictureBoxInfoShtatEd_DMI.Location = new Point(570, 58);
+            pictureBoxInfoShtatEd_DMI.Location = new Point(623, 60);
             pictureBoxInfoShtatEd_DMI.Name = "pictureBoxInfoShtatEd_DMI";
             pictureBoxInfoShtatEd_DMI.Size = new Size(21, 23);
             pictureBoxInfoShtatEd_DMI.SizeMode = PictureBoxSizeMode.Zoom;
@@ -429,33 +429,28 @@
             labelShtatEd_DMI.Font = new Font("Segoe UI", 16F);
             labelShtatEd_DMI.Location = new Point(12, 70);
             labelShtatEd_DMI.Name = "labelShtatEd_DMI";
-            labelShtatEd_DMI.Size = new Size(373, 37);
+            labelShtatEd_DMI.Size = new Size(463, 37);
             labelShtatEd_DMI.TabIndex = 1;
-            labelShtatEd_DMI.Text = "Количество штатных единиц";
-            // 
-            // textBoxPayYear_DMI
-            // 
-            textBoxPayYear_DMI.Location = new Point(455, 226);
-            textBoxPayYear_DMI.Name = "textBoxPayYear_DMI";
-            textBoxPayYear_DMI.ReadOnly = true;
-            textBoxPayYear_DMI.Size = new Size(109, 30);
-            textBoxPayYear_DMI.TabIndex = 0;
+            labelShtatEd_DMI.Text = "Общее количество штатных единиц";
             // 
             // textBoxPayMonth_DMI
             // 
-            textBoxPayMonth_DMI.Location = new Point(455, 148);
+            textBoxPayMonth_DMI.Location = new Point(508, 146);
             textBoxPayMonth_DMI.Name = "textBoxPayMonth_DMI";
             textBoxPayMonth_DMI.ReadOnly = true;
             textBoxPayMonth_DMI.Size = new Size(109, 30);
             textBoxPayMonth_DMI.TabIndex = 0;
+            textBoxPayMonth_DMI.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxShtatEd_DMI
             // 
-            textBoxShtatEd_DMI.Location = new Point(455, 77);
+            textBoxShtatEd_DMI.Location = new Point(508, 79);
             textBoxShtatEd_DMI.Name = "textBoxShtatEd_DMI";
             textBoxShtatEd_DMI.ReadOnly = true;
             textBoxShtatEd_DMI.Size = new Size(109, 30);
             textBoxShtatEd_DMI.TabIndex = 0;
+            textBoxShtatEd_DMI.Text = "5";
+            textBoxShtatEd_DMI.TextAlign = HorizontalAlignment.Center;
             // 
             // FormMain
             // 
@@ -482,7 +477,6 @@
             groupBoxBody_DMI.ResumeLayout(false);
             groupBoxBody_DMI.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chartPay_DMI).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxPayYear_DMI).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPayMonth_DMI).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoShtatEd_DMI).EndInit();
             ResumeLayout(false);
@@ -499,12 +493,9 @@
         private PictureBox pictureBoxSibvol_DMI;
         private Label labelShtatEd_DMI;
         private TextBox textBoxShtatEd_DMI;
-        private Label labelPayYear_DMI;
         private Label labelPayMonth_DMI;
-        private PictureBox pictureBoxPayYear_DMI;
         private PictureBox pictureBoxPayMonth_DMI;
         private PictureBox pictureBoxInfoShtatEd_DMI;
-        private TextBox textBoxPayYear_DMI;
         private TextBox textBoxPayMonth_DMI;
         private Label labelFeedBack_DMI;
         private LinkLabel linkLabelTg_DMI;
@@ -521,5 +512,7 @@
         private LinkLabel linkLabelGitHub_DMI;
         private Button buttonData_DMI;
         private Button buttonChart_DMI;
+        private ComboBox comboBoxMonth_DMI;
+        private Label label3;
     }
 }
