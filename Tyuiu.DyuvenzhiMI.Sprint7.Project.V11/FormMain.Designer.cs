@@ -33,6 +33,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             groupBoxInfo_DMI = new GroupBox();
             linkLabelGitHub_DMI = new LinkLabel();
             pictureBox2 = new PictureBox();
@@ -90,9 +91,9 @@
             groupBoxInfo_DMI.Controls.Add(pictureBoxPalka_DMI);
             groupBoxInfo_DMI.Dock = DockStyle.Bottom;
             groupBoxInfo_DMI.Font = new Font("Segoe UI", 10F);
-            groupBoxInfo_DMI.Location = new Point(0, 492);
+            groupBoxInfo_DMI.Location = new Point(0, 531);
             groupBoxInfo_DMI.Name = "groupBoxInfo_DMI";
-            groupBoxInfo_DMI.Size = new Size(1193, 117);
+            groupBoxInfo_DMI.Size = new Size(1261, 117);
             groupBoxInfo_DMI.TabIndex = 0;
             groupBoxInfo_DMI.TabStop = false;
             groupBoxInfo_DMI.Text = "Дополнительная информация";
@@ -204,7 +205,7 @@
             buttonAvtorInfo_DMI.Cursor = Cursors.Help;
             buttonAvtorInfo_DMI.ForeColor = Color.LightSalmon;
             buttonAvtorInfo_DMI.Image = (Image)resources.GetObject("buttonAvtorInfo_DMI.Image");
-            buttonAvtorInfo_DMI.Location = new Point(1135, 61);
+            buttonAvtorInfo_DMI.Location = new Point(1203, 61);
             buttonAvtorInfo_DMI.Name = "buttonAvtorInfo_DMI";
             buttonAvtorInfo_DMI.Size = new Size(52, 50);
             buttonAvtorInfo_DMI.TabIndex = 0;
@@ -229,7 +230,7 @@
             buttonProgramInfo_DMI.Cursor = Cursors.Help;
             buttonProgramInfo_DMI.ForeColor = SystemColors.MenuText;
             buttonProgramInfo_DMI.Image = (Image)resources.GetObject("buttonProgramInfo_DMI.Image");
-            buttonProgramInfo_DMI.Location = new Point(1145, 0);
+            buttonProgramInfo_DMI.Location = new Point(1213, 0);
             buttonProgramInfo_DMI.Name = "buttonProgramInfo_DMI";
             buttonProgramInfo_DMI.Size = new Size(48, 48);
             buttonProgramInfo_DMI.TabIndex = 1;
@@ -247,7 +248,7 @@
             groupBoxTitle_DMI.Font = new Font("Segoe UI", 10F);
             groupBoxTitle_DMI.Location = new Point(0, 0);
             groupBoxTitle_DMI.Name = "groupBoxTitle_DMI";
-            groupBoxTitle_DMI.Size = new Size(1193, 125);
+            groupBoxTitle_DMI.Size = new Size(1261, 125);
             groupBoxTitle_DMI.TabIndex = 1;
             groupBoxTitle_DMI.TabStop = false;
             groupBoxTitle_DMI.Text = "Главная страница";
@@ -255,7 +256,7 @@
             // pictureBoxSibvol_DMI
             // 
             pictureBoxSibvol_DMI.Image = (Image)resources.GetObject("pictureBoxSibvol_DMI.Image");
-            pictureBoxSibvol_DMI.Location = new Point(124, 39);
+            pictureBoxSibvol_DMI.Location = new Point(184, 42);
             pictureBoxSibvol_DMI.Name = "pictureBoxSibvol_DMI";
             pictureBoxSibvol_DMI.Size = new Size(39, 45);
             pictureBoxSibvol_DMI.SizeMode = PictureBoxSizeMode.Zoom;
@@ -268,7 +269,7 @@
             labelTitleName_DMI.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTitleName_DMI.AutoSize = true;
             labelTitleName_DMI.Font = new Font("Segoe UI", 20F);
-            labelTitleName_DMI.Location = new Point(156, 38);
+            labelTitleName_DMI.Location = new Point(216, 41);
             labelTitleName_DMI.Name = "labelTitleName_DMI";
             labelTitleName_DMI.Size = new Size(851, 46);
             labelTitleName_DMI.TabIndex = 0;
@@ -295,7 +296,7 @@
             groupBoxBody_DMI.Font = new Font("Segoe UI", 10F);
             groupBoxBody_DMI.Location = new Point(0, 125);
             groupBoxBody_DMI.Name = "groupBoxBody_DMI";
-            groupBoxBody_DMI.Size = new Size(1193, 367);
+            groupBoxBody_DMI.Size = new Size(1261, 406);
             groupBoxBody_DMI.TabIndex = 2;
             groupBoxBody_DMI.TabStop = false;
             groupBoxBody_DMI.Text = "Штатное расписание";
@@ -303,7 +304,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(717, 335);
+            label3.Location = new Point(785, 365);
             label3.Name = "label3";
             label3.Size = new Size(168, 23);
             label3.TabIndex = 9;
@@ -328,12 +329,13 @@
             // 
             buttonChart_DMI.BackColor = Color.Beige;
             buttonChart_DMI.Font = new Font("Segoe UI", 10F);
-            buttonChart_DMI.Location = new Point(1013, 332);
+            buttonChart_DMI.Location = new Point(1081, 362);
             buttonChart_DMI.Name = "buttonChart_DMI";
             buttonChart_DMI.Size = new Size(168, 29);
             buttonChart_DMI.TabIndex = 7;
             buttonChart_DMI.Text = "Построить график";
             buttonChart_DMI.UseVisualStyleBackColor = false;
+            buttonChart_DMI.Click += buttonChart_DMI_Click;
             buttonChart_DMI.MouseEnter += buttonData_DMI_MouseEnter;
             // 
             // buttonData_DMI
@@ -353,6 +355,7 @@
             // 
             chartArea1.Name = "ChartArea1";
             chartPay_DMI.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
             legend1.Name = "Legend1";
             chartPay_DMI.Legends.Add(legend1);
             chartPay_DMI.Location = new Point(660, 20);
@@ -362,10 +365,16 @@
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
+            series1.XValueMember = "Месяцы";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            series1.YValueMembers = "Сумма";
             chartPay_DMI.Series.Add(series1);
-            chartPay_DMI.Size = new Size(521, 306);
+            chartPay_DMI.Size = new Size(595, 336);
             chartPay_DMI.TabIndex = 6;
             chartPay_DMI.Text = "chart1";
+            title1.Name = "Title1";
+            title1.Text = "Фонд заработной платы по месяцам";
+            chartPay_DMI.Titles.Add(title1);
             // 
             // buttonStaff_DMI
             // 
@@ -456,7 +465,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1193, 609);
+            ClientSize = new Size(1261, 648);
             Controls.Add(groupBoxBody_DMI);
             Controls.Add(groupBoxTitle_DMI);
             Controls.Add(groupBoxInfo_DMI);
