@@ -65,12 +65,12 @@ namespace Tyuiu.DyuvenzhiMI.Sprint7.Project.V11
 
                     worksheet2.Cells["A7"].Value = FIO;
                     worksheet2.Cells["B7"].Value = Addres;
-                    worksheet2.Cells["C7"].Value = Convert.ToInt32(Tel);
+                    worksheet2.Cells["C7"].Value = Convert.ToString(Tel);
                     worksheet2.Cells["D7"].Value = Birth;
                     worksheet2.Cells["E7"].Value = Job;
-                    worksheet2.Cells["F7"].Value = Convert.ToInt32(Exp);
+                    worksheet2.Cells["F7"].Value = Convert.ToDouble(Exp);
                     worksheet2.Cells["G7"].Value = Educ;
-                    worksheet2.Cells["H7"].Value = Convert.ToInt32(Pay);
+                    worksheet2.Cells["H7"].Value = Convert.ToDouble(Pay);
 
                     //Сохраняем
                     var file = new FileInfo(path2);

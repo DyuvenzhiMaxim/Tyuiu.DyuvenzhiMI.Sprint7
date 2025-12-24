@@ -222,16 +222,16 @@ namespace Tyuiu.DyuvenzhiMI.Sprint7.Project.V11
                     worksheet.Cells[2, 2, 2, 5].LoadFromArrays(new object[][] { PayToMe });
                     //Заполняю A3-D3
                     var PayToMask = new object[] { 142000, 217000, 189000, 134000 };
-                    worksheet.Cells[3, 2, 3, 6].LoadFromArrays(new object[][] { PayToMask });
+                    worksheet.Cells[3, 2, 3, 5].LoadFromArrays(new object[][] { PayToMask });
                     //Заполняю A4-D4
                     var PayToMark = new object[] { 78000, 112000, 56000, 93000 };
-                    worksheet.Cells[4, 2, 4, 6].LoadFromArrays(new object[][] { PayToMark });
+                    worksheet.Cells[4, 2, 4, 5].LoadFromArrays(new object[][] { PayToMark });
                     //Заполняю A5-D5
                     var PayToMegan = new object[] { 43000, 28000, 57000, 35000 };
-                    worksheet.Cells[5, 2, 5, 6].LoadFromArrays(new object[][] { PayToMegan });
+                    worksheet.Cells[5, 2, 5, 5].LoadFromArrays(new object[][] { PayToMegan });
                     //Заполняю A6-D6
                     var PayToMavrody = new object[] { 17000, 24000, 13000, 29000 };
-                    worksheet.Cells[6, 2, 6, 6].LoadFromArrays(new object[][] { PayToMavrody });
+                    worksheet.Cells[6, 2, 6, 5].LoadFromArrays(new object[][] { PayToMavrody });
 
                     //Находим среднее значение у каждого рабочего
                     worksheet.Cells["G1"].Value = "ср. зарплата сотрудника";
